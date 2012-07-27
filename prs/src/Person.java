@@ -1,36 +1,38 @@
-
-
 public abstract class Person {
-	private static int ID;
-	private int id;
+	private int Id;
+	//private static int ID;
 	private String Name;
-	
-	
-	public Person(String name0){
-		Name=name0;		
-		id = ++ID;
+
+	public int getId() {
+		return Id;
 	}
-	
-	public String getName(){
+
+	public void setId(int id) {
+		Id = id;
+	}
+
+	public String getName() {
 		return Name;
 	}
-	public void setName(String name0){
-		Name =name0;		
+
+	public void setName(String name) {
+		Name = name;
 	}
-	
-	public int getID(){
-		return id;
+
+	public abstract String toString();
+
+	public int getID() {
+
+		return this.Id;
 	}
-	
-	
-	public String toString(){
-		return "";
-		
-	}
-	
-	
-	static int getMaxID(){
-		return ID;
+
+	/*public static int getMaxID() {
+
+		return 7;
+	}*/
+	static int counter = 1;
+	Person(){
+		counter++;
 	}
 
 }

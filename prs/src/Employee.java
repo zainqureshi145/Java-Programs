@@ -1,24 +1,24 @@
-
-
-public class Employee extends Person{
+public class Employee extends Person {
 	private double Salary;
-	
-	public Employee(String name0){
-		super(name0);
-	}
-	
-	public Employee(String name0,Double salary0){
-		super(name0);
-		Salary = salary0;
-	}
-	
-	public String toString(){
-		return getName()+ "is an employee earning a salary of "+getSalary();
-		
+	static int counter = 1;
+
+	public Employee() {
+		counter++;
 	}
 
-	private double getSalary() {
-		// TODO Auto-generated method stub
-		return 0;
+	public Employee(String a) {
+		super.setName(a);
+	}
+
+	public double getSalary() {
+		return Salary;
+	}
+
+	public void setSalary(double salary) {
+		Salary = salary;
+	}
+
+	public String toString() {
+		return getName() + " is an instructor with salary " + this.Salary +" " +counter;
 	}
 }

@@ -1,8 +1,5 @@
 public class Arrays {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 
 		int[] values = new int[5];
